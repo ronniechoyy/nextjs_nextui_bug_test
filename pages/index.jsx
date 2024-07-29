@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import { Button as MUIButton } from "@mui/material";
 import { Button } from "@nextui-org/react";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,6 +16,13 @@ export default function Home() {
       }}>
         Click me to about
       </Button>
+      <MUIButton onClick={()=>{
+        window.location.href = "/About";
+      }
+      }>
+        Click me to about
+      </MUIButton>
+      
     </div>
 
   );
