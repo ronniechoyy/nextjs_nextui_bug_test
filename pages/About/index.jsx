@@ -1,12 +1,21 @@
 import { Button as MUIButton } from "@mui/material";
 import { Button } from "@nextui-org/react";
 
+export async function getServerSideProps() {
+  return {
+    props: {
+      title: "About Page",
+    },
+  };
+}
 
-export default function About() {
+
+export default function About({ title }) {
   return (
     <div className=" absolute inset-0 grid place-content-center text-center">
       <div>
-        ABOUT PAGE
+        {/* ABOUT PAGE */}
+        {title}
       </div>
       <Button onClick={() => {
         window.location.href = "/";
